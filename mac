@@ -137,6 +137,9 @@ brew "gh"
 
 # Image manipulation
 brew "imagemagick"
+
+# Dependency for devs
+brew "zlib" # used for installing ruby
 EOF
 
 fancy_echo "Configuring asdf version manager ..."
@@ -161,6 +164,9 @@ add_or_update_asdf_plugin() {
 . "$(brew --prefix asdf)/libexec/asdf.sh"
 add_or_update_asdf_plugin "ruby" "https://github.com/asdf-vm/asdf-ruby.git"
 add_or_update_asdf_plugin "nodejs" "https://github.com/asdf-vm/asdf-nodejs.git"
+add_or_update_asdf_plugin "python" "https://github.com/danhper/asdf-python.git"
+add_or_update_asdf_plugin "terraform" "https://github.com/asdf-community/asdf-hashicorp.git"
+add_or_update_asdf_plugin "terragrunt" "https://github.com/lotia/asdf-terragrunt"
 
 install_asdf_language() {
 	local language="$1"
@@ -173,11 +179,11 @@ install_asdf_language() {
 	fi
 }
 
-fancy_echo "Installing latest Ruby ..."
-install_asdf_language "ruby"
-gem update --system
-number_of_cores=$(sysctl -n hw.ncpu)
-bundle config --global jobs $((number_of_cores - 1))
+# fancy_echo "Installing latest Ruby ..."
+# install_asdf_language "ruby"
+# gem update --system
+# number_of_cores=$(sysctl -n hw.ncpu)
+# bundle config --global jobs $((number_of_cores - 1))
 
 fancy_echo "Installing latest Node ..."
 install_asdf_language "nodejs"
