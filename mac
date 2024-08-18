@@ -144,7 +144,7 @@ brew "make"
 
 # zsh
 brew "zsh"
-brew "powerlevel10k" # zsh theme - https://github.com/romkatv/powerlevel10k
+brew "powerlevel10k" # zsh theme
 EOF
 
 fancy_echo "Configuring asdf version manager ..."
@@ -183,12 +183,6 @@ install_asdf_language() {
 		asdf global "$language" "$version"
 	fi
 }
-
-# fancy_echo "Installing latest Ruby ..."
-# install_asdf_language "ruby"
-# gem update --system
-# number_of_cores=$(sysctl -n hw.ncpu)
-# bundle config --global jobs $((number_of_cores - 1))
 
 fancy_echo "Installing latest Node ..."
 install_asdf_language "nodejs"

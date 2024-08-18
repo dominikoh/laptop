@@ -1,7 +1,7 @@
-Laptop
+Backend.config
 ======
 
-Laptop is a script to set up a macOS laptop for web and mobile development.
+Backend.config is a script to set up a macOS laptop for web and mobile development.
 
 It can be run multiple times on the same machine safely.
 It installs, upgrades, or skips packages
@@ -25,7 +25,8 @@ Install
 Download the script:
 
 ```sh
-curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/main/mac
+git clone <URL>
+cd backend.config
 ```
 
 Review the script (avoid running scripts you haven't read!):
@@ -77,7 +78,6 @@ Unix tools:
 * [The Silver Searcher] for finding things in files
 * [Tmux] for saving project state and switching between projects
 * [Watchman] for watching for filesystem events
-* [Zsh] as your shell
 
 [Universal Ctags]: https://ctags.io/
 [Git]: https://git-scm.com/
@@ -86,14 +86,6 @@ Unix tools:
 [The Silver Searcher]: https://github.com/ggreer/the_silver_searcher
 [Tmux]: http://tmux.github.io/
 [Watchman]: https://facebook.github.io/watchman/
-[Zsh]: http://www.zsh.org/
-
-Heroku tools:
-
-* [Heroku CLI] and [Parity] for interacting with the Heroku API
-
-[Heroku CLI]: https://devcenter.heroku.com/articles/heroku-cli
-[Parity]: https://github.com/thoughtbot/parity
 
 GitHub tools:
 
@@ -111,25 +103,23 @@ Programming languages, package managers, and configuration:
 * [Bundler] for managing Ruby libraries
 * [Node.js] and [npm], for running apps and installing JavaScript packages
 * [Ruby] stable for writing general-purpose code
-* [Yarn] for managing JavaScript packages
 * [Rosetta 2] for running tools that are not supported in Apple silicon processors
 
 [Bundler]: http://bundler.io/
 [ImageMagick]: http://www.imagemagick.org/
 [Node.js]: http://nodejs.org/
-[npm]: https://www.npmjs.org/
 [asdf-vm]: https://github.com/asdf-vm/asdf
 [Ruby]: https://www.ruby-lang.org/en/
-[Yarn]: https://yarnpkg.com/en/
 [Rosetta 2]: https://developer.apple.com/documentation/apple-silicon/about-the-rosetta-translation-environment
 
-Databases:
+Shell configuration:
 
-* [Postgres] for storing relational data
-* [Redis] for storing key-value data
+* [Zsh] as your shell
+* [powerlevel10k] for a nice shell prompt
 
-[Postgres]: http://www.postgresql.org/
-[Redis]: http://redis.io/
+[zsh]: http://www.zsh.org/
+[powerlevel10k]: https://github.com/romkatv/powerlevel10k
+
 
 It should take less than 15 minutes to install (depends on your machine).
 
@@ -219,29 +209,3 @@ your user created and first launch complete. Then duplicate that machine to test
 the script each time on a fresh install thats ready to go.
 
 [UTM]: https://mac.getutm.app
-
-License
--------
-
-Copyright © 2011 thoughtbot, inc.
-It is free software,
-and may be redistributed under the terms specified in the [LICENSE] file.
-
-[LICENSE]: LICENSE
-
-<!-- START /templates/footer.md -->
-## About thoughtbot
-
-![thoughtbot](https://thoughtbot.com/thoughtbot-logo-for-readmes.svg)
-
-This repo is maintained and funded by thoughtbot, inc.
-The names and logos for thoughtbot are trademarks of thoughtbot, inc.
-
-We love open source software!
-See [our other projects][community].
-We are [available for hire][hire].
-
-[community]: https://thoughtbot.com/community?utm_source=github
-[hire]: https://thoughtbot.com/hire-us?utm_source=github
-
-<!-- END /templates/footer.md -->
