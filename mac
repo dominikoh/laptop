@@ -130,7 +130,6 @@ brew "the_silver_searcher"
 brew "tmux"
 brew "vim"
 brew "watchman"
-brew "zsh"
 
 # GitHub
 brew "gh"
@@ -140,6 +139,12 @@ brew "imagemagick"
 
 # Dependency for devs
 brew "zlib" # used for installing ruby
+brew "awscli"
+brew "make"
+
+# zsh
+brew "zsh"
+brew "powerlevel10k" # zsh theme - https://github.com/romkatv/powerlevel10k
 EOF
 
 fancy_echo "Configuring asdf version manager ..."
