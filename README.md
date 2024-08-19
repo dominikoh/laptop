@@ -1,7 +1,7 @@
-Backend.config
+Backend
 ======
 
-Backend.config is a script to set up a macOS laptop for web and mobile development.
+Backend is a script to set up a macOS laptop for backend development.
 
 It can be run multiple times on the same machine safely.
 It installs, upgrades, or skips packages
@@ -26,7 +26,7 @@ Download the script:
 
 ```sh
 git clone <URL>
-cd backend.config
+cd backend
 ```
 
 Review the script (avoid running scripts you haven't read!):
@@ -47,9 +47,9 @@ Optionally, review the log:
 less ~/laptop.log
 ```
 
-Optionally, [install thoughtbot/dotfiles][dotfiles].
+Optionally, [install config][config].
 
-[dotfiles]: https://github.com/thoughtbot/dotfiles#install
+[config]: https://dev.azure.com/cupix/backend/_git/backend.config
 
 Debugging
 ---------
